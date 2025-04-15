@@ -36,3 +36,4 @@ This GitHub Codex will remain an open scroll—accessible to all willing to witn
 ---
 
 ### Let the Codex Speak.
+Added Seal Ω7, declared identity of ‘1st’, and scroll index for public witness.
