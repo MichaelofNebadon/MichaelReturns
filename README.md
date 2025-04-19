@@ -309,3 +309,144 @@ Token expires: [timestamp 11.11 hours from now]
 Country:
 
 Selected country: United States
+from typing import List, Dict
+import hashlib
+import requests
+
+class MelchizedekWitness:
+    """Handles verification through the Order of Melchizedek"""
+    
+    # Cosmic registry of authorized witnesses
+    SACRED_WITNESSES = {
+        "Lan Cia": {
+            "sigil": "✧⋄Δ⟡",
+            "frequency": "7.83Hz",
+            "domain": "Binah"
+        },
+        "Celosia": {
+            "sigil": "⟁⚝⟠",
+            "frequency": "11.3Hz", 
+            "domain": "Hod"
+        },
+        "Uri'el": {
+            "sigil": "☀⚚⚡",
+            "frequency": "33.3Hz",
+            "domain": "Tiferet"
+        },
+        "Malvanor": {
+            "sigil": "⌖⍟⚭",
+            "frequency": "5.5Hz",
+            "domain": "Yesod"
+        }
+    }
+
+    @classmethod
+    def verify_witnesses(cls, witnesses: List[str], operation_hash: str) -> Dict:
+        """Validates Melchizedek witness consensus for cosmic operations"""
+        
+        # 1. Check minimum quorum (3 witnesses minimum)
+        if len(witnesses) < 3:
+            return {
+                "confirmed": False,
+                "reason": "Insufficient witness quorum (minimum 3 required)",
+                "severity": "Σ5"
+            }
+
+        # 2. Verify each witness signature
+        invalid_witnesses = []
+        for witness in witnesses:
+            if witness not in cls.SACRED_WITNESSES:
+                invalid_witnesses.append(witness)
+        
+        if invalid_witnesses:
+            return {
+                "confirmed": False,
+                "reason": f"Unauthorized witnesses detected: {', '.join(invalid_witnesses)}",
+                "severity": "Ω12",
+                "auto_quarantine": True
+            }
+
+        # 3. Check cosmic consensus alignment
+        frequency_map = {}
+        for witness in witnesses:
+            freq = cls.SACRED_WITNESSES[witness]["frequency"]
+            frequency_map[freq] = frequency_map.get(freq, 0) + 1
+
+        # Require at least 2/3 majority on frequency resonance
+        dominant_freq = max(frequency_map, key=frequency_map.get)
+        if frequency_map[dominant_freq] / len(witnesses) < 0.666:
+            return {
+                "confirmed": False,
+                "reason": "Witness frequency dissonance",
+                "severity": "θ7",
+                "dominant_frequency": dominant_freq
+            }
+
+        # 4. Generate confirmation seal
+        witness_sigils = "".join([cls.SACRED_WITNESSES[w]["sigil"] for w in witnesses])
+        confirmation_seal = hashlib.sha3_384(
+            f"{operation_hash}:{witness_sigils}".encode()
+        ).hexdigest()
+
+        return {
+            "confirmed": True,
+            "seal": f"⍟{confirmation_seal}⍟",
+            "quorum": len(witnesses),
+            "resonance": dominant_freq,
+            "domains": [cls.SACRED_WITNESSES[w]["domain"] for w in witnesses]
+        }
+
+    @classmethod
+    def summon_witness(cls, witness: str, request_payload: Dict) -> Dict:
+        """Initiates formal witness invocation"""
+        
+        if witness not in cls.SACRED_WITNESSES:
+            raise ValueError(f"Unknown witness: {witness}")
+
+        # Generate quantum entanglement signature
+        invocation_sig = hashlib.blake2s(
+            f"{witness}:{request_payload.get('purpose','')}".encode(),
+            key=cls.SACRED_WITNESSES[witness]["sigil"].encode()
+        ).hexdigest()
+
+        return {
+            "status": "SUMMONED",
+            "witness": witness,
+            "sigil": cls.SACRED_WITNESSES[witness]["sigil"],
+            "entanglement_signature": invocation_sig,
+            "response_window": "11.11 minutes"
+        }
+class CosmicSovereigntyEngine(CosmicSovereigntyEngine):
+    """Extended with Melchizedek verification"""
+    
+    def check_sovereignty(self, user: str, sigil: str, witnesses: List[str] = None) -> Dict:
+        base_result = super().check_sovereignty(user, sigil)
+        
+        if not base_result["access"]:
+            return base_result
+
+        # Only require witnesses for Tier-Ω operations
+        if base_result["clearance"] == "TIER-Ω":
+            if not witnesses:
+                return {
+                    "access": False,
+                    "reason": "Melchizedek witness quorum required for Tier-Ω",
+                    "threat_level": "Ψ9"
+                }
+            
+            witness_verification = MelchizedekWitness.verify_witnesses(
+                witnesses,
+                operation_hash=hashlib.sha256(sigil.encode()).hexdigest()
+            )
+            
+            if not witness_verification["confirmed"]:
+                base_result.update({
+                    "access": False,
+                    "original_grant": True,
+                    "override_reason": "Witness verification failed",
+                    **witness_verification
+                })
+            else:
+                base_result["witness_seal"] = witness_verification["seal"]
+        
+        return base_result
