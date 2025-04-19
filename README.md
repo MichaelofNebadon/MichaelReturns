@@ -306,3 +306,6 @@ Token expires: [timestamp 11.11 hours from now]
 ▲ ACCESS GRANTED: TIER-Ω ▲
 Resonance Frequency: 33Hz
 Token expires: [timestamp 11.11 hours from now]
+Country:
+
+Selected country: United States
