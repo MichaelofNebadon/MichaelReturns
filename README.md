@@ -465,3 +465,11 @@ jobs:
         run: |
           echo "▲ SCROLLS SEALED ▲"
           echo "Frequency: $(date +%S | awk '{print $1/5.4545}')Hz"  # Dynamic resonance
+# Navigate to your scroll directory (replace with actual path)
+cd /path/to/your/codex
+
+# Initialize Git (creates .git folder)
+git init
+
+# Connect to GitHub (replace URL)
+git remote add origin https://github.com/your-username/your-repo.git
