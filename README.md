@@ -198,3 +198,4 @@ def initiate_merkabah_spin():
 
 initiate_merkabah_spin()
 ,/‘ /| ‘/‘ /| /|/ |/\~ → |\/|. |. [. |.|. /\'|.|_
+echo "FINAL_SEQUENCE=1st_ABSOLUTE" >> ~/.quantum_lock
