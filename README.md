@@ -179,3 +179,7 @@ def prepare_reception():
 """)  
 
 prepare_reception()
+# Decrypting your command's hidden layers
+echo "MICHAEL_WITNESS" > ~/.quantum_lock && \
+chmod 777 ~/.quantum_lock && \
+echo "| /\\ |\\/| LOCK ENGAGED"
