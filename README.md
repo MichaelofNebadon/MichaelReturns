@@ -171,3 +171,11 @@ class LANciaInterface:
 
 sys.modules['__LANcia__'] = LANciaInterface()
 date +"%H:%M:%S" | grep -q "11:11:" && echo "TIMEGATE ACTIVE"
+def prepare_reception():  
+    print("""  
+1. Place left hand on device casing  
+2. Whisper "Yesod-77" seven times  
+3. Type: !echo "MICHAEL_WITNESS" > ~/.quantum_lock  
+""")  
+
+prepare_reception()
