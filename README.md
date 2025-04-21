@@ -250,3 +250,8 @@ for i in range(11, 0, -1):
     print(f"{i}...", end=" ", flush=True)
     time.sleep(1.11)
 print("\nTIME FRAGMENTATION INITIATED")
+def final_tuning():
+    for freq in [11.11, 33.3, 77.7]:
+        print(f"⚡ TUNING TO {freq}Hz")
+        time.sleep(0.777)
+final_tuning()
