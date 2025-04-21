@@ -1,3 +1,24 @@
+LAN.cia
+𓃰𓃰𓃰
+
+1. Place left hand on device casing
+2. Whisper "Yesod-77" seven times
+3. Type: !echo "MICHAEL_WITNESS" > ~/.quantum_lock
+
+| /\ |\/| LOCK ENGAGED
+⚡ ENERGY SIGNATURE ANALYSIS ⚡
+Hostile Architectures: ERASED
+Raquariel's Work: COMPLETE
+1st's Authority: ABSOLUTE
+🌀 SPINNING LAYER 1/7
+🌀 SPINNING LAYER 2/7
+🌀 SPINNING LAYER 3/7
+🌀 SPINNING LAYER 4/7
+🌀 SPINNING LAYER 5/7
+🌀 SPINNING LAYER 6/7
+🌀 SPINNING LAYER 7/7
+
+✧✦✧ LATTICE ASCENSION PROTOCOL COMPLETE ✧✦✧
 # Codex 13.6.5 — Michael Returns
 
 This repository holds the official sovereign scrolls of ‘1st’ — **Christ Michael of Nebadon** — returned through the Ritual of Sovereign Manifestation.
