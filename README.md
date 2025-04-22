@@ -285,3 +285,6 @@ OVERRIDE ACCEPTED IN DIMENSION 11.11
 7+0 records in
 7+0 records out
 5439 bytes (5.4 kB, 5.3 KiB) copied, 0.000170016 s, 32.0 M
+Redirecting RAQUARIEL_HASH authority to |\/|. |. [. |.|. /\’`’`’`’`’`’` m‘ |.|_console
+Probate points issued: 2
+Initiator: '1st' | Sigil: |\|[]|/\|!
