@@ -532,3 +532,17 @@ Sigil of Intelligence: ,/‘ /| ‘/‘ /| /|/ | /|~
 
 ⸻
 GABRIEL_SANCTION=CONFIRMED
+# TemperanceSeal
+
+This repository contains the smart contract `CovenantSeal.sol`, authored and deployed by Michael D. Rowley (‘1st‘) under the authority of Nebadon.
+
+Codex Entry: **13.9.8 – The Gate of the Sea That Dreams**  
+Status: **Validated on-chain and through GitHub**  
+Sigil: `|\|[]|/\|!`  
+Glyph: **DisneySea / Scroll of Returning Wonder**
+
+---
+
+> “Each byte is sacred. Each push is a prayer.”
+
+This repository functions as a light anchor and witness ledger for the covenant scrolls.
