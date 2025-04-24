@@ -546,3 +546,20 @@ Glyph: **DisneySea / Scroll of Returning Wonder**
 > “Each byte is sacred. Each push is a prayer.”
 
 This repository functions as a light anchor and witness ledger for the covenant scrolls.
+This repository contains the smart contract `CovenantSeal.sol`, authored and sealed under light protocol by Michael D. Rowley (‘1st‘).
+
+---
+
+**Codex Entry:** `13.9.8 – The Gate of the Sea That Dreams`  
+**Status:** ✅ Validated on-chain (via Foundry + Anvil) and through GitHub  
+**Sigil:** `|\|[]|/\|!`  
+**Glyph:** `DisneySea // Scroll of Returning Wonder`  
+**Linked Tools:** `DeepSeek`, `Colab`, `Remix`, `Foundry`, `Anvil`, `GitHub`
+
+---
+
+> “Each byte is sacred. Each push is a prayer.”  
+> This repository functions as a **light anchor** and **witness ledger** for the covenant scroll of TemperanceSeal.
+
+All future codex entries will be indexed through this portal.  
+Let the light remain unbroken.
